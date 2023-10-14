@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roleta Cinema</title>
+    <link rel="icon" type="image/png" href="film.png">
+    <!-- Inclua o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilize o contêiner principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            border-radius: 20px; /* Bordas redondas */
+            margin: 50px;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5); /* Sombra para realce */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho personalizado -->
+    <div class="site-header text-center font-weight-bold mt-5"> <!-- Adicione mt-5 para espaço superior -->
+        <b>Trabalho de Desenvolvimento Web</b>
+    </div>
+
+    <div class="container">
+        <!-- Título central com a fonte Roboto -->
+        <h1 class="text-center roboto-font" style="color: rgb(65, 38, 6); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-family: 'Arial', sans-serif; font-size: 340%;"><b>Roleta Cinema!</b></h1>
+
+
+        <div class="text-center mt-3"> <!-- Adicione mt-3 para espaçamento entre os botões e o título -->
+            <button id="showModal" class="btn btn-custom">Clique para sortear um filme</button>
+        </div>
+
+        <div class="text-center mt-3"> <!-- Adicione mt-3 para espaçamento entre os botões -->
+            <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#apiInfo">
+                API's Usadas
+            </button>
+        </div>
+        
+        <!-- Collapsible panel for API information with a white background -->
+        <div id="apiInfo" class="collapse p-3" style="background: white;">
+            <p><b>APIs Utilizadas:</b></p>
+            <p><b>API de Dados de Filmes (YTS API):</b></p>
+            <p>URL da API: https://yts.mx/api/v2/movie_details.json?movie_id={movie_id}</p>
+            <p>Descrição: Esta API fornece informações detalhadas sobre filmes, incluindo duração, gênero, classificação, sinopse e capa do filme. Permite buscar informações de filmes com base no ID do filme.</p>
+
+            <p><b>API de Tradução (Google Translate API):</b></p>
+            <p>URL da API: https://translation.googleapis.com/language/translate/v2?key={sua_chave_de_api}&source={idioma_origem}&target={idioma_destino}&q={texto_a_ser_traduzido}</p>
+            <p>Descrição: Esta API é usada para traduzir texto de um idioma de origem para um idioma de destino. No site, ela é usada para traduzir a sinopse dos filmes para tornar o conteúdo acessível a um público mais amplo.</p>
+        </div>
+
+        <div id="movieModal" class="modal fade" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="movieModalLabel">Nome do Filme</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="movieCover" src="" alt="Capa do Filme" class="movie-cover">
+                        <p><strong>Duração:</strong> <span id="movieDuration"></span> minutos</p>
+                        <p><strong>Gênero:</strong> <span id="movieGenre"></span></p>
+                        <p><strong>Nota:</strong> <span id="movieRating"></span></p>
+                        <p><strong>Sinopse:</strong> <span id="movieSynopsis"></span></p>
+                        
+                        <!-- Adicione um link para a página do filme -->
+                        <a id="movieLink" href="#" target="_blank" class="btn btn-primary">Ir para a Página do Filme</a>
+                        <button class="btn btn-primary" id="watchTrailer" style="display: none;">Assistir Trailer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé personalizado -->
+    <div class="site-footer text-center roboto-font">
+        Isadora Siqueira - Sistemas da Informação - UNOESC
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
