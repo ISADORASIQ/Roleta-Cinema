@@ -1,4 +1,3 @@
-/* Estilo para o corpo da página */
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #f5f5f5;
@@ -6,14 +5,12 @@ body {
     padding: 0;
 }
 
-/* Estilo para o cabeçalho personalizado */
 .site-header {
     background-color: #f0dfdf;
     color: #fff;
     padding: 10px;
 }
 
-/* Estilo para o título */
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
@@ -31,7 +28,6 @@ h1 {
     border-radius: 5px;
 }
 
-/* Estilo para o botão "API's Usadas" */
 .btn-info {
     background-color: #007bff;
     color: #fff;
@@ -41,7 +37,6 @@ h1 {
     border-radius: 5px;
 }
 
-/* Estilo para o contêiner principal */
 .container {
     display: flex;
     flex-direction: column;
@@ -54,7 +49,6 @@ h1 {
     background-color: #ffffff00;
 }
 
-/* Estilo para o rodapé personalizado */
 .site-footer {
     background-color: #222;
     color: #fff;
@@ -68,7 +62,6 @@ h1 {
     background-color: #fff;
 }
 
-/* Estilo para os botões dentro do modal */
 .modal-content .btn {
     margin: 5px;
 }
@@ -91,7 +84,6 @@ h1 {
     width: 100%;
 }
 
-/* Estilo para o rodapé em vermelho */
 .site-footer {
     background-color: red;
     color: white;
@@ -103,23 +95,23 @@ h1 {
 }
 
 .btn-custom {
-    background-color: #632d21; /* Cor personalizada */
-    color: white; /* Cor do texto */
+    background-color: #632d21; 
+    color: white;
 }
 
 .movie-cover {
-    max-width: 80%; /* Ajuste o valor para a largura desejada */
-    height: auto; /* Mantém a proporção original da imagem */
-    display: block; /* Remove espaços em branco adicionais abaixo da imagem */
-    margin: 0 auto; /* Centraliza horizontalmente a imagem no modal */
+    max-width: 80%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 .fantasy-box {
-    background-color: #f5f5f5; /* Cor de fundo da caixa */
-    border: 1px solid #ddd; /* Borda da caixa */
-    border-radius: 10px; /* Borda arredondada */
-    margin: 0 20px; /* Margem de 20px para cada lado */
+    background-color: #f5f5f5; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    margin: 0 20px; 
 }
-/* Estilo para a imagem de fundo */
+
 body {
     background-image: url('fundo.jpg');
     background-size: cover;
