@@ -38,6 +38,9 @@ document.getElementById("showModal").addEventListener("click", () => {
             document.getElementById("movieCover").src = movieData.large_cover_image;
             document.getElementById("movieModalLabel").textContent = movieData.title;
 
+            const movieLink = document.getElementById("movieLink");
+            movieLink.href = movieData.url;            
+
             const modal = new bootstrap.Modal(document.getElementById("movieModal"));
             modal.show();
         })
