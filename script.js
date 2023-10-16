@@ -29,10 +29,8 @@ document.getElementById("showModal").addEventListener("click", () => {
             document.getElementById("movieGenre").textContent = movieData.genres.join(", ");
             document.getElementById("movieRating").textContent = movieData.rating;
 
-            // Traduza a sinopse
             translateToPortuguese(movieData.description_full)
                 .then(translatedSynopsis => {
-                    // Atualize a sinopse no modal com a tradução
                     document.getElementById("movieSynopsis").textContent = translatedSynopsis;
                 })
                 .catch(error => console.error(error));
@@ -40,7 +38,6 @@ document.getElementById("showModal").addEventListener("click", () => {
             document.getElementById("movieCover").src = movieData.large_cover_image;
             document.getElementById("movieModalLabel").textContent = movieData.title;
 
-            // Abra o modal
             const modal = new bootstrap.Modal(document.getElementById("movieModal"));
             modal.show();
         })
@@ -51,13 +48,8 @@ document.getElementById("showModal").addEventListener("click", () => {
             apiInfoModal.show();
         });
 
-        // Evento de clique no botão "Próximo Filme"
 document.getElementById("nextMovie").addEventListener("click", function() {
-    // Chame uma função para carregar um novo filme da API e atualizar o modal
-    // Exemplo:
-    // loadNextMovie(); // Esta função deve ser implementada para buscar um novo filme
 
-    // Feche o modal atual
     document.getElementById("movieModal").modal("hide");
 });
 });
